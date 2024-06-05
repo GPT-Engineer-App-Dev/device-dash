@@ -1,17 +1,28 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Button, Container, Heading, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container maxW="container.xl" p={4}>
+      <VStack spacing={8}>
+        <Box textAlign="center" py={10} px={6}>
+          <Heading as="h1" size="2xl" mb={4}>
+            Welcome to ElectroShop
+          </Heading>
+          <Text fontSize="lg" mb={6}>
+            Your one-stop shop for the latest and greatest in electronics.
+          </Text>
+          <Button as={Link} to="/products" colorScheme="teal" size="lg">
+            Shop Now
+          </Button>
+        </Box>
+        <Box w="100%" py={10} px={6} bg="gray.100" borderRadius="md">
+          <Heading as="h2" size="xl" mb={4} textAlign="center">
+            Featured Products
+          </Heading>
+          {/* Placeholder for featured products */}
+          <Text textAlign="center">Featured products will be displayed here.</Text>
+        </Box>
       </VStack>
     </Container>
   );
